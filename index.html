@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>My Family Book</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>My Family Book</h1>
+        <p>
+            Lets all see my family members
+        </p>
+        <br><br>
+        <img id="memberimage" src="family.png">
+        <br>
+        <label id="membername">My Family</label>
+        <br><br>
+        <button onclick="NextMemberDetails()">Next Member</button>
+<script>
+    var familyPics = ["family.png","myself.jpg","mother.png", "father.png" , "sister.png"];
+  
+
+    var familyMembers = ["My Family","Myself (Gunjan Kamat)", "My Mom (Anjoor Kamat)", "My Father (Swapnil Kamat)", "My Sister (Niyati Kamat)"];
+
+
+    var i=0; 
+    function NextMemberDetails()
+    {
+        i=i+1;
+        if(i>4)
+        {
+            i=0;
+        }
+        
+        document.getElementById("memberimage").src=familyPics[i];
+        document.getElementById("membername").innerHTML=familyMembers[i];
+       
+    }
+</script>
+    </body>
+</html>
